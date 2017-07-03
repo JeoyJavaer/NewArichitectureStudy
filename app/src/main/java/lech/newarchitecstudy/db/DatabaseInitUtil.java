@@ -32,6 +32,11 @@ class DatabaseInitUtil {
 
         List<CommentEntity>comments=new ArrayList<>();
 
+        generateData(products,comments);
+    }
+
+    private static void generateData(List<ProductEntity> products, List<CommentEntity> comments) {
+
 
     }
 }
