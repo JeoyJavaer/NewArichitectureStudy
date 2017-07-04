@@ -18,15 +18,16 @@ import lech.newarchitecstudy.model.Product;
 
 class DatabaseInitUtil {
 
-    private static final String[] FIRST = new String[]{"限量版", "新的", "实惠，性价比高", "质量不错", "二手的"};
+    private static final String[] FIRST = new String[]{"限量版", "新的", "实惠，性价比高", "质量不错", "二手的","","最实惠的","跳楼价","超姐便宜"};
 
-    private static final String[] SECOND = new String[]{"三个头的猴子", "肯德基", "一只赖河马", "八个宝贝"};
+    private static final String[] SECOND = new String[]{"三只松鼠", "肯德基", "一只赖河马", "小米","火星牌","戴尔","三星","玛莎拉蒂"};
 
     private static final String[] DESCRIPTION = new String[]{
             "最后挑了这家", "朋友推荐的",
-            "销量最好的", "is \uD83D\uDCAF", "is ❤️", "非常不错"};
+            "销量最好的", "is \uD83D\uDCAF", "is ❤️", "非常不错","用来组装电脑","最好的化妆品","很可爱的抱枕","用来很不错的机器"};
     private static final String[] COMMENTS    = new String[]{
-            "评论 1", "评论 2", "评论 3", "评论 4", "评论 5", "评论 6",
+            "使用了一段时间还可以 ", "很容易就死机了", "过段时间再说吧", "我就用了默认的评论", "啦啦啦啦有15个字送红包", "我就说嘛，太厉害了",
+            "性价比真心的高","用起来很很顺手","一般般吧，我用了感觉","将就着用吧，后面看看","非常不错，可以哦"
     };
 
 
