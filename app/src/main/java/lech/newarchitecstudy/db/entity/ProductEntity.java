@@ -19,7 +19,7 @@ public class ProductEntity implements Product{
 
     private String name;
 
-    private  String desctiption;
+    private  String description;
 
     private  int price;
 
@@ -31,8 +31,8 @@ public class ProductEntity implements Product{
         this.name = name;
     }
 
-    public void setDesctiption(String desctiption) {
-        this.desctiption = desctiption;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setPrice(int price) {
@@ -51,7 +51,7 @@ public class ProductEntity implements Product{
 
     @Override
     public String getDescription() {
-        return desctiption;
+        return description;
     }
 
     @Override
@@ -65,7 +65,7 @@ public class ProductEntity implements Product{
     public ProductEntity(Product product) {
         this.id = product.getId();
         this.name = product.getName();
-        this.desctiption=product.getDescription();
+        this.description =product.getDescription();
         this.price=product.getPrice();
 
 

@@ -33,7 +33,7 @@ public class CommentEntity implements Comment {
     private int    id;
     private int    productId;
     private String text;
-    private Date   postAt;
+    private Date   postedAt;
 
     @Override
     public int getId() {
@@ -53,7 +53,7 @@ public class CommentEntity implements Comment {
 
     @Override
     public Date getPostedAt() {
-        return postAt;
+        return postedAt;
     }
 
     public CommentEntity() {
@@ -71,15 +71,15 @@ public class CommentEntity implements Comment {
         this.text = text;
     }
 
-    public void setPostAt(Date postAt) {
-        this.postAt = postAt;
+    public void setPostedAt(Date postAt) {
+        this.postedAt = postAt;
     }
 
     private CommentEntity(Comment comment) {
         this.id = comment.getId();
         this.productId = comment.getProductId();
         this.text = comment.getText();
-        this.postAt = comment.getPostedAt();
+        this.postedAt = comment.getPostedAt();
 
 
     }

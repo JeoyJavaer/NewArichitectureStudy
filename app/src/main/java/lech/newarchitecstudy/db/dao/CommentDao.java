@@ -25,7 +25,7 @@ public interface CommentDao {
     List<CommentEntity>loadCommentsSync(int productId);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insetAll(List<CommentEntity>products);
+    void insertAll(List<CommentEntity>products);
 
 
 
