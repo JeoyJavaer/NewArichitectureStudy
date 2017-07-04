@@ -19,16 +19,13 @@ import lech.newarchitecstudy.db.entity.CommentEntity;
 public interface CommentDao {
 
     @Query("SELECT * FROM comments where productId = :productId")
-    LiveData<List<CommentEntity>>loadComments(int productId);
+    LiveData<List<CommentEntity>> loadComments(int productId);
 
-    @Query("SELECT * FROM cmments where productId= productId")
-    List<CommentEntity>loadCommentsSync(int productId);
+    @Query("SELECT * FROM comments where productId= :productId")
+    List<CommentEntity> loadCommentsSync(int productId);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAll(List<CommentEntity>products);
-
-
-
+    void insertAll(List<CommentEntity> products);
 
 
 }

@@ -21,7 +21,7 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="数据加载中。。。"
             android:textAlignment="center"
-            app:visiableGone="@{isLoading}"
+            app:visibleGone="@{isLoading}"
             />
 
         <android.support.v7.widget.RecyclerView

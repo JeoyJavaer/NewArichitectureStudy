@@ -1,11 +1,11 @@
 package lech.newarchitecstudy;
 
-import android.support.v7.app.AppCompatActivity;
+import android.arch.lifecycle.LifecycleActivity;
 import android.os.Bundle;
 
 import lech.newarchitecstudy.model.Product;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends LifecycleActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

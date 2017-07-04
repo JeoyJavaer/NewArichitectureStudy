@@ -18,7 +18,7 @@ import lech.newarchitecstudy.db.entity.ProductEntity;
 @Dao
 public interface ProductDao {
 
-    @Query("SELECT 8 FROM products")
+    @Query("SELECT * FROM products")
     LiveData<List<ProductEntity>> loadAllProducts();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

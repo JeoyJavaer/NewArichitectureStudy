@@ -20,7 +20,7 @@ class DatabaseInitUtil {
 
     private static final String[] FIRST = new String[]{"限量版", "新的", "实惠，性价比高", "质量不错", "二手的"};
 
-    public static final String[] SECOND = new String[]{"三个头的猴子", "肯德基", "一只赖河马", "八个宝贝"};
+    private static final String[] SECOND = new String[]{"三个头的猴子", "肯德基", "一只赖河马", "八个宝贝"};
 
     private static final String[] DESCRIPTION = new String[]{
             "最后挑了这家", "朋友推荐的",
@@ -30,13 +30,14 @@ class DatabaseInitUtil {
     };
 
 
-    public static void initializeDb(AppDatabase db) {
+     static void initializeDb(AppDatabase db) {
 
         List<ProductEntity> products = new ArrayList<>(FIRST.length * SECOND.length);
 
         List<CommentEntity> comments = new ArrayList<>();
 
         generateData(products, comments);
+        insertData(db,products,comments);
     }
 
     private static void generateData(List<ProductEntity> products, List<CommentEntity> comments) {
@@ -73,8 +74,8 @@ class DatabaseInitUtil {
         try {
             db.productDao().insertAll(products);
             db.commentDao().insertAll(comments);
-        } catch (Exception e) {
-            e.printStackTrace();
+            db.setTransactionSuccessful();
+        } finally {
             db.endTransaction();
         }
 

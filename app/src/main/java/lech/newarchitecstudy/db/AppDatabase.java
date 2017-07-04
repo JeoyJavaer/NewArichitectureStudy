@@ -15,13 +15,13 @@ import lech.newarchitecstudy.db.entity.ProductEntity;
  * Description
  * Others
  */
-@Database(entities = {ProductEntity.class, CommentEntity.class}, version =1)
+@Database(entities = {ProductEntity.class, CommentEntity.class}, version = 1)
 @TypeConverters(DateConverter.class)
-public abstract class AppDatabase extends RoomDatabase{
+public abstract class AppDatabase extends RoomDatabase {
 
-    public static final String DATABASE_NAME="";
+    static final String DATABASE_NAME = "basic-sample-db";
 
-    public  abstract ProductDao productDao();
+    public abstract ProductDao productDao();
 
     public abstract CommentDao commentDao();
 

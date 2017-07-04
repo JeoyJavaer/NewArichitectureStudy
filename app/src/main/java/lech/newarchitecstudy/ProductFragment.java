@@ -45,10 +45,10 @@ public class ProductFragment extends LifecycleFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ProductFragmentBinding bindng = DataBindingUtil.inflate(inflater, R.layout.product_fragment, container, false);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.product_fragment, container, false);
         mCommentAdapter=new CommentAdapter(mcallback);
-        bindng.commentList.setAdapter(mCommentAdapter);
-        return bindng.getRoot();
+        mBinding.commentList.setAdapter(mCommentAdapter);
+        return mBinding.getRoot();
     }
 
     @Override

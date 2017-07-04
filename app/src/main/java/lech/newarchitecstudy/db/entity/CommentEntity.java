@@ -8,7 +8,6 @@ import android.arch.persistence.room.PrimaryKey;
 import java.util.Date;
 
 import lech.newarchitecstudy.model.Comment;
-import lech.newarchitecstudy.model.Product;
 
 /**
  * Created by Android_61 on 2017/7/3.
@@ -17,7 +16,7 @@ import lech.newarchitecstudy.model.Product;
  */
 
 @Entity(tableName = "comments", foreignKeys = {
-        @ForeignKey(entity = Product.class,
+        @ForeignKey(entity = ProductEntity.class,
                 parentColumns = "id",
                 childColumns = "productId",
                 onDelete = ForeignKey.CASCADE

@@ -67,6 +67,7 @@ public class ProductListFragment extends LifecycleFragment {
                 if (productEntities != null) {
                     mBinding.setIsLoading(false);
                     mProductAdapter.setProductList(productEntities);
+                    System.out.println("ProductEntites:"+productEntities.toString());
                 } else {
                     mBinding.setIsLoading(true);
                 }
